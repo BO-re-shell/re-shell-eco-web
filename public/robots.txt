@@ -1,0 +1,11 @@
+# robots.txt for Re-Shell Website
+
+User-agent: *
+Allow: /
+Disallow: /success
+
+# Sitemap location
+Sitemap: https://re-shell.com/sitemap.xml
+
+# Delay between requests
+Crawl-delay: 1

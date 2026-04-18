@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fcf8fc;
+  color: #1c1b1e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
