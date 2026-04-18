@@ -1,15 +1,16 @@
-import { useState } from 'react'
+import React, { useState, ChangeEvent, FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { sendEmail } from '../forms/emailjs-config'
 import { validatePartnerForm } from '../forms/validators'
+import type { PartnerFormData } from '../types/forms'
 
 export default function PartnerWithUsPage() {
   const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<PartnerFormData>({
     contactName: '',
     email: '',
     companyName: '',
@@ -18,15 +19,15 @@ export default function PartnerWithUsPage() {
     phone: '',
   })
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
-    setFormData(prev => ({
+    setFormData((prev: PartnerFormData) => ({
       ...prev,
       [name]: value,
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     setError(null)
     setLoading(true)

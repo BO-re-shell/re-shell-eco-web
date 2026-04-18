@@ -1,43 +1,44 @@
-import { useState } from 'react'
+import React, { useState, ChangeEvent, FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { sendEmail } from '../forms/emailjs-config'
 import { validateDataRequestForm } from '../forms/validators'
+import type { DataRequestFormData } from '../types/forms'
 
 export default function DataRequestPage() {
   const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<DataRequestFormData>({
     fullName: '',
     email: '',
     company: '',
     sector: '',
-    mineralFocus: [] as string[],
-    requestType: [] as string[],
+    mineralFocus: [],
+    requestType: [],
     applicationDetails: '',
   })
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
-    setFormData(prev => ({
+    setFormData((prev: DataRequestFormData) => ({
       ...prev,
       [name]: value,
     }))
   }
 
-  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>, fieldName: 'mineralFocus' | 'requestType') => {
+  const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>, fieldName: 'mineralFocus' | 'requestType') => {
     const { value, checked } = e.target
-    setFormData(prev => ({
+    setFormData((prev: DataRequestFormData) => ({
       ...prev,
       [fieldName]: checked
         ? [...prev[fieldName], value]
-        : prev[fieldName].filter(item => item !== value),
+        : prev[fieldName].filter((item: string) => item !== value),
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     setError(null)
     setLoading(true)
@@ -228,7 +229,7 @@ export default function DataRequestPage() {
                       type="checkbox"
                       value="CaCO3"
                       checked={formData.mineralFocus.includes('CaCO3')}
-                      onChange={e => handleCheckboxChange(e, 'mineralFocus')}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => handleCheckboxChange(e, 'mineralFocus')}
                       className="w-4 h-4 border-outline-variant text-primary focus:ring-0 rounded-none"
                     />
                     <span className="font-label text-sm text-on-surface group-hover:text-primary transition-colors font-medium">
@@ -240,7 +241,7 @@ export default function DataRequestPage() {
                       type="checkbox"
                       value="CaO"
                       checked={formData.mineralFocus.includes('CaO')}
-                      onChange={e => handleCheckboxChange(e, 'mineralFocus')}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => handleCheckboxChange(e, 'mineralFocus')}
                       className="w-4 h-4 border-outline-variant text-primary focus:ring-0 rounded-none"
                     />
                     <span className="font-label text-sm text-on-surface group-hover:text-primary transition-colors font-medium">
@@ -252,7 +253,7 @@ export default function DataRequestPage() {
                       type="checkbox"
                       value="Both"
                       checked={formData.mineralFocus.includes('Both')}
-                      onChange={e => handleCheckboxChange(e, 'mineralFocus')}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => handleCheckboxChange(e, 'mineralFocus')}
                       className="w-4 h-4 border-outline-variant text-primary focus:ring-0 rounded-none"
                     />
                     <span className="font-label text-sm text-on-surface group-hover:text-primary transition-colors font-medium">
@@ -274,7 +275,7 @@ export default function DataRequestPage() {
                       type="checkbox"
                       value="TDS"
                       checked={formData.requestType.includes('TDS')}
-                      onChange={e => handleCheckboxChange(e, 'requestType')}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => handleCheckboxChange(e, 'requestType')}
                       className="w-4 h-4 border-outline-variant text-primary focus:ring-0 rounded-none"
                     />
                     <span className="font-label text-sm text-on-surface group-hover:text-primary transition-colors font-medium">
@@ -286,7 +287,7 @@ export default function DataRequestPage() {
                       type="checkbox"
                       value="SDS"
                       checked={formData.requestType.includes('SDS')}
-                      onChange={e => handleCheckboxChange(e, 'requestType')}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => handleCheckboxChange(e, 'requestType')}
                       className="w-4 h-4 border-outline-variant text-primary focus:ring-0 rounded-none"
                     />
                     <span className="font-label text-sm text-on-surface group-hover:text-primary transition-colors font-medium">
@@ -298,7 +299,7 @@ export default function DataRequestPage() {
                       type="checkbox"
                       value="Samples"
                       checked={formData.requestType.includes('Samples')}
-                      onChange={e => handleCheckboxChange(e, 'requestType')}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => handleCheckboxChange(e, 'requestType')}
                       className="w-4 h-4 border-outline-variant text-primary focus:ring-0 rounded-none"
                     />
                     <span className="font-label text-sm text-on-surface group-hover:text-primary transition-colors font-medium">
@@ -310,7 +311,7 @@ export default function DataRequestPage() {
                       type="checkbox"
                       value="Pilot"
                       checked={formData.requestType.includes('Pilot')}
-                      onChange={e => handleCheckboxChange(e, 'requestType')}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => handleCheckboxChange(e, 'requestType')}
                       className="w-4 h-4 border-outline-variant text-primary focus:ring-0 rounded-none"
                     />
                     <span className="font-label text-sm text-on-surface group-hover:text-primary transition-colors font-medium">

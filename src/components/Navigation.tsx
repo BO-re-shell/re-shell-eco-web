@@ -55,7 +55,7 @@ export default function Navigation() {
           {/* Hamburger Button (mobile only) */}
           <button
             className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5"
-            onClick={() => setMenuOpen(prev => !prev)}
+            onClick={() => setMenuOpen((prev: boolean) => !prev)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           >
             <span
