@@ -19,10 +19,10 @@ export default function Navigation() {
         <Link to="/home" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
           <img
             alt="Re-shell logo"
-            className="h-16 w-auto object-contain"
+            className="h-24 w-auto object-contain"
             src="/images/environmental/re-shell-logo.png"
           />
-          <span className="font-headline text-2xl font-bold text-stone-900">Re-shell</span>
+          <span className="font-headline text-3xl font-bold text-stone-900">Re-shell</span>
         </Link>
 
         {/* Desktop Links */}

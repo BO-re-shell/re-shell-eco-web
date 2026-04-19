@@ -5,7 +5,14 @@ export default function Footer() {
     <footer className="w-full py-20 px-8 bg-stone-100">
       <div className="flex flex-col md:flex-row justify-between items-start gap-12 max-w-7xl mx-auto">
         <div className="max-w-xs">
-          <div className="font-headline text-xl font-bold text-stone-900 mb-6">Re-shell</div>
+          <Link to="/home" className="flex items-center gap-3 mb-6">
+            <img
+              alt="Re-shell logo"
+              className="h-20 w-auto object-contain"
+              src="/images/environmental/re-shell-logo.png"
+            />
+            <div className="font-headline text-2xl font-bold text-stone-900">Re-shell</div>
+          </Link>
           <p className="font-body text-sm text-stone-500 leading-relaxed">
             Engineering a mineral-neutral future through the scientific upcycling of marine bio-waste.
           </p>
