@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
-    <footer className="w-full py-20 px-8 bg-stone-100">
+    <footer className="w-full py-20 px-4 md:px-8 bg-stone-100">
       <div className="flex flex-col md:flex-row justify-between items-start gap-12 max-w-7xl mx-auto">
         <div className="max-w-xs">
           <Link to="/home" className="flex items-center gap-3 mb-6">
@@ -17,7 +17,7 @@ export default function Footer() {
             Engineering a mineral-neutral future through the scientific upcycling of marine bio-waste.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-16 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-8 md:gap-16 md:grid-cols-4">
           <div>
             <span className="font-label text-xs tracking-widest uppercase text-stone-400 mb-6 block">Company</span>
             <ul className="space-y-4">

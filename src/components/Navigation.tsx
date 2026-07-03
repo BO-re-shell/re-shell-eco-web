@@ -14,15 +14,15 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md">
-      <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+      <div className="flex justify-between items-center px-4 py-2 md:px-8 md:py-4 max-w-7xl mx-auto">
         {/* Logo */}
-        <Link to="/home" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
+        <Link to="/home" className="flex items-center gap-2 md:gap-3" onClick={() => setMenuOpen(false)}>
           <img
             alt="Re-shell logo"
-            className="h-24 w-auto object-contain"
+            className="h-12 md:h-20 w-auto object-contain transition-all"
             src="/images/environmental/re-shell-logo.png"
           />
-          <span className="font-headline text-3xl font-bold text-stone-900">Re-shell</span>
+          <span className="font-headline text-xl md:text-3xl font-bold text-stone-900">Re-shell</span>
         </Link>
 
         {/* Desktop Links */}
@@ -46,7 +46,7 @@ export default function Navigation() {
           {/* CTA Button */}
           <Link
             to="/partner-with-us"
-            className="bg-primary text-on-primary px-6 py-2 rounded-sm font-label text-sm uppercase tracking-widest hover:opacity-80 transition-opacity"
+            className="hidden sm:block bg-primary text-on-primary px-6 py-2 rounded-sm font-label text-sm uppercase tracking-widest hover:opacity-80 transition-opacity"
             onClick={() => setMenuOpen(false)}
           >
             Contact Us
@@ -79,7 +79,7 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-stone-100 px-8 py-6 flex flex-col gap-6">
+        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-stone-100 px-6 py-6 flex flex-col gap-6">
           {navLinks.map(link => (
             <Link
               key={link.to}
@@ -94,6 +94,13 @@ export default function Navigation() {
               {link.label}
             </Link>
           ))}
+          <Link
+            to="/partner-with-us"
+            onClick={() => setMenuOpen(false)}
+            className="bg-primary text-on-primary text-center px-6 py-3 rounded-sm font-label text-sm uppercase tracking-widest hover:opacity-80 transition-opacity mt-2"
+          >
+            Contact Us
+          </Link>
         </div>
       )}
     </nav>

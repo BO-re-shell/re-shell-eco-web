@@ -6,7 +6,7 @@ export default function NotFoundPage() {
   return (
     <>
       <Navigation />
-      <main className="pt-32 pb-20 px-8">
+      <main className="pt-24 md:pt-32 pb-20 px-4 md:px-8">
         <div className="max-w-7xl mx-auto py-20">
           <div className="mb-12 h-64 md:h-80 rounded-sm overflow-hidden mb-16">
             <img
@@ -26,16 +26,16 @@ export default function NotFoundPage() {
             </p>
             <p className="font-body text-secondary">Let's get you back on the path to Re-shell.</p>
           </div>
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-xs sm:max-w-none mx-auto">
             <Link
               to="/home"
-              className="bg-primary text-on-primary px-10 py-4 rounded-sm font-label text-sm uppercase tracking-widest hover:opacity-80 transition-opacity"
+              className="bg-primary text-on-primary text-center px-10 py-4 rounded-sm font-label text-sm uppercase tracking-widest hover:opacity-80 transition-opacity"
             >
               Back to Home
             </Link>
             <Link
               to="/partner-with-us"
-              className="bg-white border border-primary text-primary px-10 py-4 rounded-sm font-label text-sm uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all"
+              className="bg-white border border-primary text-primary text-center px-10 py-4 rounded-sm font-label text-sm uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all"
             >
               Partner With Us
             </Link>

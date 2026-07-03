@@ -6,7 +6,7 @@ export default function FormSuccessPage() {
   return (
     <>
       <Navigation />
-      <main className="pt-32 pb-20 px-8">
+      <main className="pt-24 md:pt-32 pb-20 px-4 md:px-8">
         <div className="max-w-7xl mx-auto py-32">
           <div className="mb-12 h-64 md:h-80 rounded-sm overflow-hidden">
             <img
@@ -15,7 +15,7 @@ export default function FormSuccessPage() {
               src="/images/environmental/caco3.webp"
             />
           </div>
-          <div className="bg-white rounded-sm shadow-sm p-12 md:p-20 max-w-2xl mx-auto text-center">
+          <div className="bg-white rounded-sm shadow-sm p-6 md:p-20 max-w-2xl mx-auto text-center">
             <div className="mb-12">
               <span
                 className="material-symbols-outlined text-tertiary text-7xl mb-6 block"
@@ -56,13 +56,13 @@ export default function FormSuccessPage() {
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link
                 to="/home"
-                className="bg-primary text-on-primary px-10 py-4 rounded-sm font-label text-sm uppercase tracking-widest hover:opacity-80 transition-opacity"
+                className="bg-primary text-on-primary text-center px-10 py-4 rounded-sm font-label text-sm uppercase tracking-widest hover:opacity-80 transition-opacity"
               >
                 Back to Home
               </Link>
               <Link
                 to="/partner-with-us"
-                className="bg-white border border-primary text-primary px-10 py-4 rounded-sm font-label text-sm uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all"
+                className="bg-white border border-primary text-primary text-center px-10 py-4 rounded-sm font-label text-sm uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all"
               >
                 Partner With Us
               </Link>

@@ -77,11 +77,11 @@ export default function DataRequestPage() {
   return (
     <>
       <Navigation />
-      <main className="pt-32 pb-24 px-8 md:px-12 max-w-7xl mx-auto">
+      <main className="pt-24 md:pt-32 pb-24 px-4 md:px-12 max-w-7xl mx-auto">
         {/* Hero Header Section */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20 items-end">
           <div className="lg:col-span-7">
-            <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl text-primary leading-[1.05] tracking-tight mb-10">
+            <h1 className="font-headline text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-primary leading-[1.05] tracking-tight mb-10">
               Request Technical Specifications &amp; Samples
             </h1>
             <p className="font-body text-lg md:text-xl text-secondary leading-relaxed max-w-2xl">
@@ -369,8 +369,8 @@ export default function DataRequestPage() {
           />
           <div className="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-surface via-transparent to-surface h-full"></div>
-          <div className="absolute inset-0 flex items-center justify-center px-6">
-            <div className="bg-surface/90 backdrop-blur-md p-14 max-w-xl text-center border border-outline-variant/20 shadow-2xl">
+          <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6">
+            <div className="bg-surface/90 backdrop-blur-md p-6 sm:p-14 max-w-xl text-center border border-outline-variant/20 shadow-2xl">
               <h5 className="font-headline italic text-3xl text-primary mb-6">Precision Engineering</h5>
               <p className="font-body text-lg text-secondary leading-relaxed">
                 Our minerals are processed at a state-of-the-art facility designed specifically for shell-derived mineralogy refinement.

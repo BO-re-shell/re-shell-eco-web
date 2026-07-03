@@ -22,7 +22,7 @@ export default function HomePage() {
               <span className="font-label text-xs uppercase tracking-[0.2em] text-secondary mb-6 block">
                 The Elemental Archive
               </span>
-              <h1 className="font-headline text-5xl md:text-7xl font-extrabold text-primary leading-[1.1] mb-8 tracking-tighter">
+              <h1 className="font-headline text-4xl sm:text-5xl md:text-7xl font-extrabold text-primary leading-[1.1] mb-8 tracking-tighter">
                 Redefining <span className="text-secondary italic">Industrial Minerals</span> with Circular Biomaterials
               </h1>
               <p className="font-body text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed">
@@ -59,7 +59,7 @@ export default function HomePage() {
                       src="/images/environmental/caco3.webp"
                     />
                   </div>
-                  <div className="absolute -bottom-8 -right-8 p-10 bg-white shadow-2xl max-w-xs">
+                  <div className="absolute -bottom-8 right-0 md:-right-8 p-6 md:p-10 bg-white shadow-2xl max-w-xs">
                     <span className="font-label text-xs uppercase tracking-widest text-secondary block mb-2">
                       Purity Standard
                     </span>

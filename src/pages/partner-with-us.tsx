@@ -65,16 +65,16 @@ export default function PartnerWithUsPage() {
   return (
     <>
       <Navigation />
-      <main className="pt-32 pb-20">
+      <main className="pt-24 md:pt-32 pb-20">
         {/* Hero Section */}
-        <section className="max-w-[1440px] mx-auto px-8 mb-24">
+        <section className="max-w-[1440px] mx-auto px-4 md:px-8 mb-24">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
             <div className="md:col-span-7 space-y-6">
               <div>
                 <span className="font-label uppercase tracking-[0.2em] text-secondary text-sm mb-4 block">
                   Industrial Collaboration
                 </span>
-                <h1 className="font-headline text-5xl md:text-7xl text-primary leading-tight">
+                <h1 className="font-headline text-3xl sm:text-5xl md:text-7xl text-primary leading-tight">
                   Forging circularity through marine minerals.
                 </h1>
               </div>
@@ -94,13 +94,13 @@ export default function PartnerWithUsPage() {
 
         {/* Partnership Verticals */}
         <section className="bg-surface-container-low py-24 mb-24">
-          <div className="max-w-[1440px] mx-auto px-8">
+          <div className="max-w-[1440px] mx-auto px-4 md:px-8">
             <div className="mb-16 space-y-4">
               <h2 className="font-headline text-3xl text-primary">Target Sectors</h2>
               <div className="w-16 h-1 bg-primary"></div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="bg-surface-container-highest p-8 flex flex-col justify-between aspect-square">
+              <div className="bg-surface-container-highest p-6 md:p-8 flex flex-col justify-between aspect-square">
                 <span className="font-label text-xs tracking-widest text-secondary uppercase">01</span>
                 <div className="space-y-3">
                   <h3 className="font-headline text-2xl text-primary">Construction</h3>
@@ -109,7 +109,7 @@ export default function PartnerWithUsPage() {
                   </p>
                 </div>
               </div>
-              <div className="bg-surface-container-highest p-8 flex flex-col justify-between aspect-square">
+              <div className="bg-surface-container-highest p-6 md:p-8 flex flex-col justify-between aspect-square">
                 <span className="font-label text-xs tracking-widest text-secondary uppercase">02</span>
                 <div className="space-y-3">
                   <h3 className="font-headline text-2xl text-primary">Pharma</h3>
@@ -118,7 +118,7 @@ export default function PartnerWithUsPage() {
                   </p>
                 </div>
               </div>
-              <div className="bg-surface-container-highest p-8 flex flex-col justify-between aspect-square">
+              <div className="bg-surface-container-highest p-6 md:p-8 flex flex-col justify-between aspect-square">
                 <span className="font-label text-xs tracking-widest text-secondary uppercase">03</span>
                 <div className="space-y-3">
                   <h3 className="font-headline text-2xl text-primary">Plastics</h3>
@@ -127,7 +127,7 @@ export default function PartnerWithUsPage() {
                   </p>
                 </div>
               </div>
-              <div className="bg-surface-container-highest p-8 flex flex-col justify-between aspect-square">
+              <div className="bg-surface-container-highest p-6 md:p-8 flex flex-col justify-between aspect-square">
                 <span className="font-label text-xs tracking-widest text-secondary uppercase">04</span>
                 <div className="space-y-3">
                   <h3 className="font-headline text-2xl text-primary">Remediation</h3>
@@ -141,7 +141,7 @@ export default function PartnerWithUsPage() {
         </section>
 
         {/* Contact Form Section */}
-        <section className="max-w-[1440px] mx-auto px-8">
+        <section className="max-w-[1440px] mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div className="space-y-12">
               <div className="space-y-6">
@@ -176,7 +176,7 @@ export default function PartnerWithUsPage() {
               </div>
             </div>
 
-            <div className="bg-surface-container p-8 md:p-12">
+            <div className="bg-surface-container p-6 md:p-12">
               <form onSubmit={handleSubmit} className="space-y-8">
                 {error && (
                   <div className="bg-error/10 border border-error p-4 rounded-sm">

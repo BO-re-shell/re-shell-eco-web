@@ -6,9 +6,9 @@ export default function OurStoryPage() {
   return (
     <>
       <Navigation />
-      <main className="pt-32">
+      <main className="pt-24 md:pt-32">
         {/* Hero Section: Asymmetric & Editorial */}
-        <section className="max-w-screen-2xl mx-auto px-8 mb-20 md:mb-40">
+        <section className="max-w-screen-2xl mx-auto px-4 md:px-8 mb-20 md:mb-40">
           <div className="flex flex-col md:flex-row items-end gap-12">
             <div className="w-full md:w-3/5 relative">
               <div className="aspect-[4/5] md:aspect-[16/9] bg-surface-container-high overflow-hidden">
@@ -18,7 +18,7 @@ export default function OurStoryPage() {
                   src="/images/environmental/mussel.jpg"
                 />
               </div>
-              <div className="absolute -bottom-12 -right-6 md:-right-12 bg-surface p-8 md:p-12 max-w-md shadow-sm">
+              <div className="absolute -bottom-12 right-0 left-6 md:left-auto md:-right-12 bg-surface p-6 md:p-12 max-w-md shadow-sm">
                 <span className="font-label text-xs tracking-[0.2em] text-on-surface-variant uppercase mb-4 block">
                   Genesis 01.
                 </span>
@@ -41,13 +41,13 @@ export default function OurStoryPage() {
 
         {/* Mission Section: Tonal Layering */}
         <section className="bg-surface-container-low py-24 md:py-40">
-          <div className="max-w-screen-xl mx-auto px-8">
+          <div className="max-w-screen-xl mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
               <div className="md:col-span-5">
                 <h2 className="font-headline text-3xl font-bold text-primary mb-8">Our Mission</h2>
                 <div className="space-y-6">
                   <p className="font-body text-xl text-on-surface">
-                    We exist to eliminate the carbon footprint of industrial minerals by harnessing the regenerative cycle of the ocean.
+                     We exist to eliminate the carbon footprint of industrial minerals by harnessing the regenerative cycle of the ocean.
                   </p>
                   <p className="font-body text-on-surface-variant leading-relaxed">
                     Traditional mineral extraction relies on destructive quarrying and high-heat processing. Re-shell bypasses this through "Atmospheric Calcification"—a proprietary cold-cleansing process that preserves the mineral integrity of marine bio-waste while removing organic impurities.
@@ -57,24 +57,24 @@ export default function OurStoryPage() {
 
               {/* Bento Grid for Metrics */}
               <div className="md:col-span-7 grid grid-cols-2 gap-4">
-                <div className="bg-surface-container-highest p-10 flex flex-col justify-between aspect-square">
+                <div className="bg-surface-container-highest p-6 sm:p-10 flex flex-col justify-between aspect-square">
                   <span className="material-symbols-outlined text-primary text-3xl">waves</span>
                   <div>
-                    <h3 className="font-headline text-5xl font-black text-primary">+95%</h3>
-                    <p className="font-label text-xs tracking-widest uppercase mt-4 text-on-surface-variant">Purity Rating</p>
+                    <h3 className="font-headline text-3xl sm:text-5xl font-black text-primary">+95%</h3>
+                    <p className="font-label text-[10px] sm:text-xs tracking-widest uppercase mt-4 text-on-surface-variant">Purity Rating</p>
                   </div>
                 </div>
-                <div className="bg-primary text-on-primary p-10 flex flex-col justify-between aspect-square">
+                <div className="bg-primary text-on-primary p-6 sm:p-10 flex flex-col justify-between aspect-square">
                   <span className="material-symbols-outlined text-on-primary text-3xl">eco</span>
                   <div>
-                    <h3 className="font-headline text-5xl font-black">-72%</h3>
-                    <p className="font-label text-xs tracking-widest uppercase mt-4 text-on-primary-container">CO₂ Reduction</p>
+                    <h3 className="font-headline text-3xl sm:text-5xl font-black">-72%</h3>
+                    <p className="font-label text-[10px] sm:text-xs tracking-widest uppercase mt-4 text-on-primary-container">CO₂ Reduction</p>
                   </div>
                 </div>
-                <div className="col-span-2 bg-secondary-container p-10 flex flex-col md:flex-row items-center gap-8">
+                <div className="col-span-2 bg-secondary-container p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8">
                   <div className="flex-1">
-                    <h3 className="font-headline text-3xl font-bold text-on-secondary-container">The Circular Standard</h3>
-                    <p className="font-body text-sm text-on-secondary-container mt-2">
+                    <h3 className="font-headline text-2xl sm:text-3xl font-bold text-on-secondary-container">The Circular Standard</h3>
+                    <p className="font-body text-xs sm:text-sm text-on-secondary-container mt-2">
                       Integrating waste streams into high-end glass, ceramics, and architectural polymers.
                     </p>
                   </div>
@@ -87,7 +87,7 @@ export default function OurStoryPage() {
 
         {/* Process Section: Narrative Flow */}
         <section className="py-24 md:py-40 overflow-hidden">
-          <div className="max-w-screen-2xl mx-auto px-8">
+          <div className="max-w-screen-2xl mx-auto px-4 md:px-8">
             <div className="flex flex-col md:flex-row gap-20 items-center">
               <div className="w-full md:w-1/2 order-2 md:order-1">
                 <div className="relative">
@@ -139,8 +139,8 @@ export default function OurStoryPage() {
         </section>
 
         {/* Bridge to Team Section */}
-        <section className="max-w-screen-xl mx-auto px-8 mb-40">
-          <div className="bg-surface-container-high p-12 md:p-24 relative overflow-hidden">
+        <section className="max-w-screen-xl mx-auto px-4 md:px-8 mb-40">
+          <div className="bg-surface-container-high p-6 md:p-24 relative overflow-hidden">
             <div className="relative z-10 max-w-2xl">
               <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary mb-6 italic">
                 "We don't just see waste; we see the architecture of the ocean."

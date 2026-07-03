@@ -7,12 +7,12 @@ export default function TeamPage() {
   return (
     <>
       <Navigation />
-      <main className="pt-32">
+      <main className="pt-24 md:pt-32">
         {/* Hero Section */}
-        <section className="max-w-screen-2xl mx-auto px-8 mb-20">
+        <section className="max-w-screen-2xl mx-auto px-4 md:px-8 mb-20">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
             <div className="md:col-span-7">
-              <h1 className="font-headline text-6xl md:text-8xl font-black text-primary tracking-tighter leading-none mb-6">
+              <h1 className="font-headline text-4xl sm:text-6xl md:text-8xl font-black text-primary tracking-tighter leading-none mb-6">
                 Architects of <br />Circular Flow
               </h1>
               <p className="font-body text-xl text-on-surface-variant max-w-xl leading-relaxed">
@@ -33,7 +33,7 @@ export default function TeamPage() {
         </section>
 
         {/* Team Grid - Bento Inspired */}
-        <section className="max-w-screen-2xl mx-auto px-8 space-y-8">
+        <section className="max-w-screen-2xl mx-auto px-4 md:px-8 space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
             {/* Founder Card */}
             <div className="md:col-span-8 bg-surface-container-low rounded-sm overflow-hidden flex flex-col md:flex-row group">
@@ -44,7 +44,7 @@ export default function TeamPage() {
                   src="/images/team/beyza.jpeg"
                 />
               </div>
-              <div className="md:w-1/2 p-10 flex flex-col justify-between">
+              <div className="md:w-1/2 p-6 md:p-10 flex flex-col justify-between">
                 <div>
                   <span className="font-label text-[0.7rem] uppercase tracking-[0.15em] text-secondary font-bold mb-4 block">
                     Founder & Visionary
@@ -62,7 +62,7 @@ export default function TeamPage() {
             </div>
 
             {/* R&D Engineer Card */}
-            <div className="md:col-span-4 bg-surface-container-highest rounded-sm p-8 flex flex-col">
+            <div className="md:col-span-4 bg-surface-container-highest rounded-sm p-6 sm:p-8 flex flex-col">
               <div className="w-full aspect-square mb-8 overflow-hidden">
                 <img
                   alt="Evrim Uludağ - R&D Lead"
@@ -82,12 +82,12 @@ export default function TeamPage() {
             </div>
 
             {/* Sustainability Expert Card */}
-            <div className="md:col-span-4 bg-surface-container-high rounded-sm p-8 flex flex-col">
+            <div className="md:col-span-4 bg-surface-container-high rounded-sm p-6 sm:p-8 flex flex-col">
               <div className="w-full aspect-square mb-8 overflow-hidden">
                 <img
                   alt="Erdem Kuruca - Sustainability Officer"
                   className="w-full h-full object-cover"
-                  src="/images/team/erdem.jpeg"
+                  src="/images/team/erdem.jpg"
                 />
               </div>
               <div>
@@ -103,8 +103,8 @@ export default function TeamPage() {
 
             {/* Milo Card */}
             <div className="md:col-span-8 rounded-sm overflow-hidden flex flex-col md:flex-row relative">
-              <div className="md:w-1/2 p-10 flex flex-col justify-center z-10">
-                <div className="bg-[#432d21]/70 backdrop-blur-sm p-8 rounded-sm">
+              <div className="md:w-1/2 p-6 md:p-10 flex flex-col justify-center z-10">
+                <div className="bg-[#432d21]/70 backdrop-blur-sm p-6 sm:p-8 rounded-sm">
                   <span className="font-label text-[0.7rem] uppercase tracking-[0.15em] text-primary-fixed-dim font-bold mb-4 block">
                     Moral Support & Vibe Tech
                   </span>
@@ -117,7 +117,7 @@ export default function TeamPage() {
               <div className="md:w-1/2 h-80 md:h-full relative overflow-hidden">
                 <img
                   alt="Milo - Chief Happiness Officer"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                   src="/images/team/milio.jpeg"
                 />
               </div>
@@ -127,12 +127,12 @@ export default function TeamPage() {
 
         {/* Stats Section */}
         <section className="mt-40 bg-surface-container-low py-24">
-          <div className="max-w-screen-2xl mx-auto px-8">
+          <div className="max-w-screen-2xl mx-auto px-4 md:px-8">
             <div className="mb-16">
               <span className="font-label text-xs uppercase tracking-[0.3em] text-outline block mb-4">
                 Collective Intelligence
               </span>
-              <h2 className="font-headline text-4xl text-primary font-bold">
+              <h2 className="font-headline text-2xl sm:text-4xl text-primary font-bold">
                 Production Aims & MVP Development
               </h2>
             </div>
@@ -146,7 +146,7 @@ export default function TeamPage() {
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-surface-container-highest p-8 flex flex-col justify-between aspect-square">
+                <div className="bg-surface-container-highest p-4 sm:p-8 flex flex-col justify-between aspect-square">
                   <span className="font-headline text-5xl text-primary font-black">
                     45k<span className="text-2xl">t</span>
                   </span>
@@ -159,7 +159,7 @@ export default function TeamPage() {
                     </p>
                   </div>
                 </div>
-                <div className="bg-surface-container-highest p-8 flex flex-col justify-between aspect-square">
+                <div className="bg-surface-container-highest p-4 sm:p-8 flex flex-col justify-between aspect-square">
                   <span className="font-headline text-5xl text-primary font-black">100%</span>
                   <div>
                     <h4 className="font-label font-bold uppercase tracking-widest text-[0.65rem] mb-2">
@@ -176,8 +176,8 @@ export default function TeamPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-32 max-w-screen-xl mx-auto px-8 text-center">
-          <h2 className="font-headline text-5xl font-black text-primary mb-8 tracking-tighter">
+        <section className="py-32 max-w-screen-xl mx-auto px-4 md:px-8 text-center">
+          <h2 className="font-headline text-4xl sm:text-5xl font-black text-primary mb-8 tracking-tighter">
             Join the Archive
           </h2>
           <p className="font-body text-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
